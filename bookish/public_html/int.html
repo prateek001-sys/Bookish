@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <button onclick="sqrt()">sqrt</button>
+<br>
+    <button onclick="havi()">Uppercase</button>
+    
+    <br><br>
+
+    <button onclick="blue()">blue</button>
+    <button onclick="red()">red</button>
+    <button onclick="black()">black</button>
+    <button onclick="white()">white</button>
+    
+    <div id="myDIV" style="height: 200px; width: 200px;">
+    </div>
+    
+    <form name="myForm">
+        <input type="password" name="userPass" onkeyup="pass()">
+        strenght: <span id="myLocation">no strenght</span>
+    </form>
+
+    <script>
+        function pass(){
+            var err;
+            if(document.myForm.userPass.value.length>5){
+                console.log('havi');
+                err="good";
+            } else{
+                err="poor";
+            }
+            document.getElementById('myLocation').innerText=err;
+        }
+
+    </script>
+
+
+    <script>
+        function sqrt(){
+            const number = parseInt(prompt("Enter a positive number: "));
+            var values = Math.sqrt(number);
+            alert(values);
+        }
+        function havi() {
+            var havi = prompt("Enter a word: ");
+            // console.log(havi)
+            var uppercase = havi.toUpperCase();
+            // console.log(uppercase)
+            alert(uppercase)
+        }
+        function blue() {
+            document.getElementById("myDIV").style.backgroundColor = "lightblue";
+        }
+        function red() {
+            document.getElementById("myDIV").style.backgroundColor = "red";
+        }
+        function black() {
+            document.getElementById("myDIV").style.backgroundColor = "black";
+        }
+        function white() {
+            document.getElementById("myDIV").style.backgroundColor = "white";
+        }
+    </script>
+</body>
+</html>
